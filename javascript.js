@@ -97,4 +97,9 @@ function game(rounds){
     }
 }
 
-game(5);
+let buttons = document.querySelectorAll('.btn');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        console.log(playRound(button.textContent,computerPlay()));
+    });
+});
