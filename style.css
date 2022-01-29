@@ -1,0 +1,40 @@
+body {
+    background-color: lightslategray;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    width: 150px;
+    height: 75px;
+    font-size: 32px;
+    background-color: lightslategray;
+    border: 2px solid white;
+    color: white;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: gray;
+}
+
+.results {
+    font-weight: bold;
+}
+
+.score, .results {
+    font-size: 75px;
+}
+
+h1 {
+    font-size: 150px;
+    border: 5px solid white;
+    padding: 0px 20px 10px;
+    margin-bottom: 30px;
+}
