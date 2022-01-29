@@ -110,9 +110,32 @@ function game(rounds){
         else if (losses === rounds) {
             score.textContent = "You lose the series! Final score: "+finalscore;
         }
+        container.appendChild(playAgain);
+        buttons.forEach(button => {
+            button.setAttribute('style', 'cursor: not-allowed;');
+            button.disabled = true;
+        });
     }
 
+    playAgain.addEventListener('click', () => {
+        wins = 0;
+        losses = 0;
+        score.textContent = "Current score: 0 to 0";
+        results.textContent = "Choose!";
+        buttons.forEach(button => {
+            button.setAttribute('style', 'cursor: pointer;');
+            button.disabled = false;
+        });
+        container.removeChild(playAgain);
+    
+    });
+
 }
+
+const container = document.querySelector('.container');
+const playAgain = document.createElement('button');
+playAgain.textContent = "Play Again";
+playAgain.setAttribute('style', 'width: 300px; height: 150px; font-size: 50px;');
 
 const buttons = document.querySelectorAll('.btn');
 const results = document.querySelector('.results');
